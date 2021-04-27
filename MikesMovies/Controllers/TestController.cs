@@ -69,5 +69,28 @@ namespace MikesMovies.Controllers
             return View(myCustomer);
 
         }
+
+        //Creating a get view for customers to sign up to the website
+        public ActionResult SignUp()
+        {
+            ViewBag.Message = "Sign up here !";
+
+            return View();
+        }
+
+        //Creating a post view for customers to sign up to the website
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult SignUp(CustomerModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+
+
     }
 }
