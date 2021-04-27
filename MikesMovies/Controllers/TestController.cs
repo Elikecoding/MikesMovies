@@ -1,4 +1,5 @@
-﻿using SecondHelperLibrary.ModelClasses;
+﻿
+using SecondHelperLibrary.ModelClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +14,11 @@ namespace MikesMovies.Controllers
         public ActionResult Index()
         {
             //Create a divide by 0 error
-            int myAge = 0;
-            int i = 5;
-            var sum =   i / myAge;
+            //int myAge = 0;
+            //int i = 5;
+            //var sum =   i / myAge;
 
-            return View(sum);
+            return View();
         }
 
         //Creating a Test view for my controller 

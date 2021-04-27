@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MikesMovies", "MikesMovies\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MikesMovies.Tests", "MikesMovies.Tests\MikesMovies.Tests.csproj", "{4E15AFD6-EA9E-4DE9-9C61-B810B57248E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecondHelperLibrary", "..\MikesMechanics\SecondHelperLibrary\SecondHelperLibrary.csproj", "{227E637E-AA62-46D4-9747-6C651C6CFCA3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecondHelperLibrary", "SecondHelperLibrary\SecondHelperLibrary.csproj", "{227E637E-AA62-46D4-9747-6C651C6CFCA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

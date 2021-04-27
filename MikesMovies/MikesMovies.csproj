@@ -186,7 +186,7 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\MikesMechanics\SecondHelperLibrary\SecondHelperLibrary.csproj">
+    <ProjectReference Include="..\SecondHelperLibrary\SecondHelperLibrary.csproj">
       <Project>{227E637E-AA62-46D4-9747-6C651C6CFCA3}</Project>
       <Name>SecondHelperLibrary</Name>
     </ProjectReference>
