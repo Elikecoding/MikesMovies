@@ -1,4 +1,5 @@
 ﻿
+using static SecondHelperLibrary.LogicClasses.BusinessLogic.customerProcessor;
 using SecondHelperLibrary.ModelClasses;
 using System;
 using System.Collections.Generic;
@@ -70,6 +71,29 @@ namespace MikesMovies.Controllers
 
         }
 
+        public ActionResult ListDbPeople()
+        {
+            ViewBag.Message = "Customer List";
+
+            var data = LoadCustomers();
+
+            List<CustomerModel> customers = new List<CustomerModel>();
+
+            foreach (var row in data)
+            {
+                customers.Add(new CustomerModel
+                {
+                    customerId = row.customerId,
+                    FirstName = row.FirstName,
+                    LastName = row.LastName,
+                    Email = row.Email,
+                    ConfirmEmail = row.Email
+                });
+            }
+
+            return View(customers);
+        }
+
         //Creating a get view for customers to sign up to the website
         public ActionResult SignUp()
         {
@@ -85,6 +109,10 @@ namespace MikesMovies.Controllers
         {
             if (ModelState.IsValid)
             {
+               int recordsCreated =  CreateCustomer(model.customerId, 
+                    model.FirstName, 
+                    model.LastName, 
+                    model.Email);
                 return RedirectToAction("Index");
             }
 
