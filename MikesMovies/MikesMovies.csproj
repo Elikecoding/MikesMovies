@@ -210,7 +210,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Test\Exlab.cshtml" />
     <Content Include="Views\Test\ListPeople.cshtml" />
-    <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Test\TestIndex.cshtml" />
     <Content Include="Views\Test\SignUp.cshtml" />
     <Content Include="Views\Test\ListDbPeople.cshtml" />
   </ItemGroup>

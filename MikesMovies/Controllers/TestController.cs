@@ -12,7 +12,7 @@ namespace MikesMovies.Controllers
     public class TestController : Controller
     {
         // GET: Test
-        public ActionResult Index()
+        public ActionResult TestIndex()
         {
             //Create a divide by 0 error
             //int myAge = 0;
@@ -35,36 +35,39 @@ namespace MikesMovies.Controllers
             List<CustomerModel> myCustomer = new List<CustomerModel>();
             myCustomer.Add(new CustomerModel
             {
-                customerId = 1,
-                FirstName = "First",
-                LastName = "Customer",
-                Email = "Test@example.com",
-                ConfirmEmail = "Test@example.com",
-                Password = "FindABetterPassword",
-                ConfirmPassword = "FindABetterPassword",
+                customer_Id = 1,
+                first_name = "First",
+                last_name = "Customer",
+                email = "Test@example.com",
+                phone = "07700900314",
+                confirm_email = "Test@example.com",
+                password = "FindABetterpassword",
+                confirm_password = "FindABetterPassword",
             });
 
             myCustomer.Add(new CustomerModel
             {
-                customerId = 1,
-                FirstName = "Second",
-                LastName = "Customer",
-                Email = "Test2@example.com",
-                ConfirmEmail = "Test2@example.com",
-                Password = "FindABetterPassword2",
-                ConfirmPassword = "FindABetterPassword2",
+                customer_Id = 2,
+                first_name = "Second",
+                last_name = "Customer",
+                email = "Test2@example.com",
+                phone = "07700900605",
+                confirm_email = "Test2@example.com",
+                password = "FindABetterPassword2",
+                confirm_password = "FindABetterPassword2",
             });
 
 
             myCustomer.Add(new CustomerModel
             {
-                customerId = 1,
-                FirstName = "Third",
-                LastName = "Customer",
-                Email = "Test3@example.com",
-                ConfirmEmail = "Test3@example.com",
-                Password = "FindABetterPassword3",
-                ConfirmPassword = "FindABetterPassword3",
+                customer_Id = 3,
+                first_name = "Third",
+                last_name = "Customer",
+                email = "Test3@example.com",
+                phone = "07700900283",
+                confirm_email = "Test3@example.com",
+                password = "FindABetterPassword3",
+                confirm_password = "FindABetterPassword3",
             });
 
             return View(myCustomer);
@@ -83,11 +86,12 @@ namespace MikesMovies.Controllers
             {
                 customers.Add(new CustomerModel
                 {
-                    customerId = row.customerId,
-                    FirstName = row.FirstName,
-                    LastName = row.LastName,
-                    Email = row.Email,
-                    ConfirmEmail = row.Email
+                    customer_Id = row.customer_Id,
+                    first_name = row.first_name,
+                    last_name = row.last_name,
+                    phone = row.phone,
+                    email = row.email,
+                    confirm_email = row.email
                 });
             }
 
@@ -109,10 +113,12 @@ namespace MikesMovies.Controllers
         {
             if (ModelState.IsValid)
             {
-               int recordsCreated =  CreateCustomer(model.customerId, 
-                    model.FirstName, 
-                    model.LastName, 
-                    model.Email);
+               int recordsCreated =  CreateCustomer(
+                    model.customer_Id, 
+                    model.first_name, 
+                    model.last_name, 
+                    model.email,
+                    model.phone);
                 return RedirectToAction("Index");
             }
 
